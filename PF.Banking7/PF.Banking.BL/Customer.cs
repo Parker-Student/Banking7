@@ -35,7 +35,7 @@ namespace PF.Banking.BL
             {
                 Database db = new Database();
                 SqlCommand sqlCommand = new SqlCommand();
-                string sql = "insert into tblCustomer (Id, FirstName, LastName, SSN, BirthDate) " +
+                string sql = "insert into tblCustomers (Id, FirstName, LastName, SSN, BirthDate) " +
                              " VALUES (@Id, @FirstName, @LastName, @SSN, @BirthDate)";
 
                 sqlCommand.CommandText = sql;
@@ -66,7 +66,7 @@ namespace PF.Banking.BL
             {
                 Database db = new Database();
                 SqlCommand sqlCommand = new SqlCommand();
-                string sql = "UPDATE tblCustomer SET FirstName = @FirstName, LastName = @FirstName, SSN = @SSN, " +
+                string sql = "UPDATE tblCustomers SET FirstName = @FirstName, LastName = @FirstName, SSN = @SSN, " +
                              "BirthDate= @BirthDate " +
                              " WHERE Id = @Id";
 
@@ -98,10 +98,9 @@ namespace PF.Banking.BL
             {
                 Database db = new Database();
                 SqlCommand sqlCommand = new SqlCommand();
-                string sql = "DELETE FROM tblCustomer WHERE Id = @Id";
+                string sql = "DELETE FROM tblCustomers WHERE Id = @Id";
+
        
-
-
                 sqlCommand.CommandText = sql;
 
                 sqlCommand.Parameters.AddWithValue("@Id", this.CustomerId);

@@ -19,7 +19,7 @@ namespace PF.Banking.BL
                 DataTable withdrawls = new DataTable();
 
                 // Retrieve the data
-                string sql = "SELECT * FROM tblWithdrawls";
+                string sql = "SELECT * FROM tblWithdrawals";
                 withdrawls = db.Select(sql);
 
                 this.Clear();

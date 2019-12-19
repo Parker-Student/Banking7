@@ -32,7 +32,7 @@ namespace PF.Banking7.UI
                 customers = new Customers();
                 customers.GetAll();
                 deposits.GetAll();
-                //withdrawls.GetAll();
+                withdrawls.GetAll();
                                Rebind();
             }
             catch (Exception ex)
@@ -148,7 +148,12 @@ namespace PF.Banking7.UI
         {
             if (dgvCustomers.CurrentRow.Index > -1)
             {
-                Customer customer = customers[dgvCustomers.CurrentRow.Index];                // Save today's date.
+                Customer customer = customers[dgvCustomers.CurrentRow.Index];
+               //Withdrawl withdrawl = withdrawls[dgvWithdrawls.CurrentRow.Index];
+                //Deposit deposit = deposits[dgvDeposits.CurrentRow.Index];
+                
+                                             
+                // Save today's date.
                 var today = DateTime.Today;
                 // Calculate the age.
                 var age = today.Year - customer.BirthDate.Year;
@@ -162,6 +167,7 @@ namespace PF.Banking7.UI
                 datetimeBirthday.Value = customer.BirthDate;
                 txtAge.Text = age.ToString();
 
+               
               
             }
         }
