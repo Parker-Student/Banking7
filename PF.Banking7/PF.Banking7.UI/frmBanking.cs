@@ -102,7 +102,7 @@ namespace PF.Banking7.UI
                 {
                     Customer customer = customers[dgvCustomers.CurrentRow.Index];
 
-                    customer.CustomerId = customers.GetNewId();
+                    //customer.CustomerId = customers.GetNewId();
 
                     customer.FirstName = txtFirstName.Text;
                     customer.LastName = txtLastName.Text;
@@ -169,6 +169,14 @@ namespace PF.Banking7.UI
 
                
               
+            }
+        }
+
+        private void dgvWithdrawls_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvWithdrawls.CurrentRow.Index > -1)
+            {
+                Withdrawl withdrawl = withdrawls[dgvWithdrawls.CurrentRow.Index];
             }
         }
     }

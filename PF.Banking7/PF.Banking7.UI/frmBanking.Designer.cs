@@ -73,6 +73,7 @@
             this.dgvWithdrawls.Name = "dgvWithdrawls";
             this.dgvWithdrawls.Size = new System.Drawing.Size(568, 150);
             this.dgvWithdrawls.TabIndex = 1;
+            this.dgvWithdrawls.SelectionChanged += new System.EventHandler(this.dgvWithdrawls_SelectionChanged);
             // 
             // dgvDeposits
             // 
