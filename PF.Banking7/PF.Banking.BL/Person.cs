@@ -14,7 +14,7 @@ using System.Threading.Tasks;
      */
 namespace PF.Banking.BL
 {
-    class Person
+    public class Person
     {
         private string ssn;
 

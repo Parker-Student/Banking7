@@ -130,6 +130,27 @@ namespace PF.Banking.PL
                 throw ex;
             }
         }
+        public DataTable Select(string sql)
+        {
+            try
+            {
+                DataTable dataTable = new DataTable();
 
+                if (ConnectionState.Open == Open())
+                {
+                    SqlCommand sqlCommand = new SqlCommand(sql, connection);
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                    sqlDataAdapter.Fill(dataTable);
+                    Close();
+                }
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

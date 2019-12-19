@@ -19,7 +19,7 @@ namespace PF.Banking.BL
     e.	Depost property method (generic list of Deposit Objects)
     f.	Withdrawals property (generic list of Withdrawal Objects)
     */
-    class Customer
+    public class Customer : Person
     {
         private int customerid;
 
@@ -35,13 +35,17 @@ namespace PF.Banking.BL
             {
                 Database db = new Database();
                 SqlCommand sqlCommand = new SqlCommand();
-                string sql = "insert into tblItemType (Id, Description) " +
-                             " VALUES (@Id, @Description)";
+                string sql = "insert into tblCustomer (Id, FirstName, LastName, SSN, BirthDate) " +
+                             " VALUES (@Id, @FirstName, @LastName, @SSN, @BirthDate)";
 
                 sqlCommand.CommandText = sql;
 
-                sqlCommand.Parameters.AddWithValue("@Id", id);
-                sqlCommand.Parameters.AddWithValue("@Description", description);
+                sqlCommand.Parameters.AddWithValue("@Id", this.CustomerID);
+                sqlCommand.Parameters.AddWithValue("@FirstName", this.FirstName);
+                sqlCommand.Parameters.AddWithValue("@LastName", this.LastName);
+                sqlCommand.Parameters.AddWithValue("@SSN", this.SSN);
+                sqlCommand.Parameters.AddWithValue("@BirthDate", this.BirthDate);
+                
 
                 int result = db.Insert(sqlCommand);
                 db = null;
@@ -62,13 +66,17 @@ namespace PF.Banking.BL
             {
                 Database db = new Database();
                 SqlCommand sqlCommand = new SqlCommand();
-                string sql = "UPDATE tblItemType SET Description = @Description " +
+                string sql = "UPDATE tblCustomer SET FirstName = @FirstName, LastName = @FirstName, SSN = @SSN, " +
+                             "BirthDate= @BirthDate " +
                              " WHERE Id = @Id";
 
                 sqlCommand.CommandText = sql;
 
-                sqlCommand.Parameters.AddWithValue("@Id", id);
-                sqlCommand.Parameters.AddWithValue("@Description", description);
+                sqlCommand.Parameters.AddWithValue("@Id", this.CustomerID);
+                sqlCommand.Parameters.AddWithValue("@FirstName", this.FirstName);
+                sqlCommand.Parameters.AddWithValue("@LastName", this.LastName);
+                sqlCommand.Parameters.AddWithValue("@SSN", this.SSN);
+                sqlCommand.Parameters.AddWithValue("@BirthDate", this.BirthDate);
 
                 int result = db.Update(sqlCommand);
                 db = null;
@@ -90,11 +98,11 @@ namespace PF.Banking.BL
             {
                 Database db = new Database();
                 SqlCommand sqlCommand = new SqlCommand();
-                string sql = "DELETE FROM tblItemType WHERE Id = @Id";
+                string sql = "DELETE FROM tblCustomer WHERE Id = @Id";
 
                 sqlCommand.CommandText = sql;
 
-                sqlCommand.Parameters.AddWithValue("@Id", id);
+                sqlCommand.Parameters.AddWithValue("@Id", this.CustomerID);
 
                 int result = db.Delete(sqlCommand);
                 db = null;

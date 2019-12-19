@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PF.Banking.BL\PF.Banking.BL.csproj">
+      <Project>{f49e689a-e037-4bb3-b03a-b990ff128f4c}</Project>
+      <Name>PF.Banking.BL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

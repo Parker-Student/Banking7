@@ -259,6 +259,7 @@
             this.Controls.Add(this.dgvCustomers);
             this.Name = "frmBanking";
             this.Text = "Customer Maintenance";
+            this.Load += new System.EventHandler(this.frmBanking_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWithdrawls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeposits)).EndInit();
