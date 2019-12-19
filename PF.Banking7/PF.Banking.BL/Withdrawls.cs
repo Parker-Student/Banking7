@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace PF.Banking.BL
 {
     //a.	Load method – uses PL.Database.Select to return a generic list of withdrawal objects.
-    class Withdrawls
+    public class Withdrawls : List<Withdrawl>
     {
         public void GetAll()
         {

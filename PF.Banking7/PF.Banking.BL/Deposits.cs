@@ -11,7 +11,7 @@ using System.IO;
 
 namespace PF.Banking.BL
 {
-    public class Deposits
+    public class Deposits : List<Deposit>
     {
         public void GetAll()
         {

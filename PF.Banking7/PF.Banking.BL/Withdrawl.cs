@@ -12,7 +12,7 @@ namespace PF.Banking.BL
     c.	WithdrawalAmount (decimal)
     d.	WithdrawalDate (datetime)
     */
-    class Withdrawl
+    public class Withdrawl
     {
 
 		private int customerid;
