@@ -50,5 +50,11 @@
     <Compile Include="Withdrawl.cs" />
     <Compile Include="Withdrawls.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PF.Banking.PL\PF.Banking.PL.csproj">
+      <Project>{9166efe0-30a8-4502-92a8-d701fb4ce1bd}</Project>
+      <Name>PF.Banking.PL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

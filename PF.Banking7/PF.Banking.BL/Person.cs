@@ -16,5 +16,40 @@ namespace PF.Banking.BL
 {
     class Person
     {
+        private string ssn;
+
+        public string SSN
+        {
+            get { return ssn; }
+            set { ssn = value; }
+        }
+
+        private string firstName;
+
+        public string FirstName
+        {
+            get { return firstName; }
+            set { firstName = value; }
+        }
+
+        private string lastName;
+
+        public string LastName
+        {
+            get { return lastName; }
+            set { lastName = value; }
+        }
+
+        private DateTime birthdate;
+
+        public DateTime BirthDate
+        {
+            get { return birthdate; }
+            set { birthdate = value; }
+        }
+
+
+
+
     }
 }

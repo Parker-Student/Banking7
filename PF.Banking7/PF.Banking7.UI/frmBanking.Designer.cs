@@ -258,7 +258,7 @@
             this.Controls.Add(this.dgvWithdrawls);
             this.Controls.Add(this.dgvCustomers);
             this.Name = "frmBanking";
-            this.Text = "Banking";
+            this.Text = "Customer Maintenance";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWithdrawls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeposits)).EndInit();
