@@ -49,9 +49,12 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.datetimeBirthday = new System.Windows.Forms.DateTimePicker();
             this.txtAge = new System.Windows.Forms.Label();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWithdrawls)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeposits)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvCustomers
@@ -196,6 +199,7 @@
             this.btnNew.TabIndex = 20;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnUpdate
             // 
@@ -205,6 +209,7 @@
             this.btnUpdate.TabIndex = 21;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -214,6 +219,7 @@
             this.btnDelete.TabIndex = 22;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // datetimeBirthday
             // 
@@ -231,11 +237,27 @@
             this.txtAge.Size = new System.Drawing.Size(48, 21);
             this.txtAge.TabIndex = 24;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblStatus});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 612);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1029, 22);
+            this.statusStrip1.TabIndex = 25;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 17);
+            // 
             // frmBanking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 634);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.datetimeBirthday);
             this.Controls.Add(this.btnDelete);
@@ -263,6 +285,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWithdrawls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeposits)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,6 +315,8 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DateTimePicker datetimeBirthday;
         private System.Windows.Forms.Label txtAge;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblStatus;
     }
 }
 

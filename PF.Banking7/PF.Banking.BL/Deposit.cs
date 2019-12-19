@@ -13,7 +13,41 @@ namespace PF.Banking.BL
     d.	DepositDate (datetime)
 
          */
-    class Deposit
+    public class Deposit
     {
-    }
+
+		private int customerid;
+
+		public int CustomerId
+		{
+			get { return customerid; }
+			set { customerid = value; }
+		}
+
+
+		private int depositid;
+
+		public int DepositId
+		{
+			get { return depositid; }
+			set { depositid = value; }
+		}
+
+		private decimal depositamount;
+
+		public decimal DepositAmount
+		{
+			get { return depositamount; }
+			set { depositamount = value; }
+		}
+
+		private DateTime depositdate;
+
+		public DateTime DepositDate
+		{
+			get { return depositdate; }
+			set { depositdate = value; }
+		}
+
+	}
 }

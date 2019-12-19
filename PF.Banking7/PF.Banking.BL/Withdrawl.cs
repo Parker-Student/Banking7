@@ -14,5 +14,38 @@ namespace PF.Banking.BL
     */
     class Withdrawl
     {
-    }
+
+		private int customerid;
+
+		public int CustomerId
+		{
+			get { return customerid; }
+			set { customerid = value; }
+		}
+
+
+		private int withdrawlid;
+
+		public int WithdrawlId
+		{
+			get { return withdrawlid; }
+			set { withdrawlid = value; }
+		}
+
+		private decimal withdrawlamount;
+
+		public decimal WithdrawlAmount
+		{
+			get { return withdrawlamount; }
+			set { withdrawlamount = value; }
+		}
+
+		private DateTime withdrawldate;
+
+		public DateTime WithdrawlDate
+		{
+			get { return withdrawldate; }
+			set { withdrawldate = value; }
+		}
+	}
 }

@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+
 
 
 
@@ -13,6 +15,16 @@ namespace PF.Banking.BL
     //a.	Load method – returns a list of customer objects.
    public class Customers : List<Customer>
     {
+        delegate int GetNextId(int x);
+        public int GetNewId()
+        {
+            GetNextId getNextId = delegate (int x)
+            {
+                x = x + 1;
+                return x;
+            };
+            return getNextId(this.Max(c => c.CustomerID));
+        }
         public void GetAll()
         {
             try

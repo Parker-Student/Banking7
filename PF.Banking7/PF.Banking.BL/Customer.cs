@@ -28,7 +28,7 @@ namespace PF.Banking.BL
             get { return customerid; }
             set { customerid = value; }
         }
-
+       
         public bool Insert()
         {
             try

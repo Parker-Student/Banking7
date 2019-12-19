@@ -44,5 +44,11 @@
     <Compile Include="Database.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PF.Banking.DB\PF.Banking.DB.sqlproj">
+      <Project>{ce560e57-2607-401f-8f6b-ac571cc97665}</Project>
+      <Name>PF.Banking.DB</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,8 +19,8 @@ namespace PF.Banking.PL
    public class Database
     {
         SqlConnection connection;
-        string connstr = "Data Source=(localdb)\\ProjectsV13;Integrated Security = True; Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout = 60; Encrypt=False;TrustServerCertificate=False";
-
+        string connstr = "Data Source = (localdb)\\ProjectsV13;Initial Catalog = master; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        
         public ConnectionState Open()
         {
             try
