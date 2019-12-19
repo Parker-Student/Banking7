@@ -23,7 +23,7 @@ namespace PF.Banking.BL
                 x = x + 1;
                 return x;
             };
-            return getNextId(this.Max(c => c.CustomerID));
+            return getNextId(this.Max(c => c.CustomerId));
         }
         public void GetAll()
         {
@@ -42,7 +42,7 @@ namespace PF.Banking.BL
                 foreach (DataRow dr in customers.Rows)
                 {
                     Customer customer = new Customer();
-                    customer.CustomerID = Convert.ToInt32(dr["Id"]);
+                    customer.CustomerId = Convert.ToInt32(dr["Id"]);
                     customer.FirstName = dr["FirstName"].ToString();
                     customer.LastName = dr["LastName"].ToString();
                     customer.SSN = dr["SSN"].ToString();

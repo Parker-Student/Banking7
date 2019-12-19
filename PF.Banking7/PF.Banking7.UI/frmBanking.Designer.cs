@@ -64,6 +64,7 @@
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.Size = new System.Drawing.Size(936, 150);
             this.dgvCustomers.TabIndex = 0;
+            this.dgvCustomers.SelectionChanged += new System.EventHandler(this.dgvCustomers_SelectionChanged);
             // 
             // dgvWithdrawls
             // 

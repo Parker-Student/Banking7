@@ -14,6 +14,8 @@ namespace PF.Banking7.UI
     public partial class frmBanking : Form
     {
         Customers customers;
+        Withdrawls withdrawls;
+        Deposits deposits;
         public frmBanking()
         {
             InitializeComponent();
@@ -25,9 +27,13 @@ namespace PF.Banking7.UI
             dgvCustomers.MultiSelect = false;
             try
             {
+                withdrawls = new Withdrawls();
+                deposits = new Deposits();
                 customers = new Customers();
                 customers.GetAll();
-                Rebind();
+                deposits.GetAll();
+                //withdrawls.GetAll();
+                               Rebind();
             }
             catch (Exception ex)
             {
@@ -44,7 +50,14 @@ namespace PF.Banking7.UI
             // Bind computers list to the datagrid view
             dgvCustomers.DataSource = null;
             dgvCustomers.DataSource = customers;
-                                 
+
+            dgvDeposits.DataSource = null;
+            dgvDeposits.DataSource = deposits;
+
+            dgvWithdrawls.DataSource = null;
+            dgvWithdrawls.DataSource = withdrawls;
+
+
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -57,7 +70,7 @@ namespace PF.Banking7.UI
 
                 //computer.Id = computers.Max(p => p.Id) + 1;
                 // Call to a method that encompasses an anonymous function.
-                customer.CustomerID = customers.GetNewId();
+                customer.CustomerId = customers.GetNewId();
 
                 customer.FirstName = txtFirstName.Text;
                 customer.LastName = txtLastName.Text;
@@ -89,7 +102,7 @@ namespace PF.Banking7.UI
                 {
                     Customer customer = customers[dgvCustomers.CurrentRow.Index];
 
-                    customer.CustomerID = customers.GetNewId();
+                    customer.CustomerId = customers.GetNewId();
 
                     customer.FirstName = txtFirstName.Text;
                     customer.LastName = txtLastName.Text;
@@ -127,6 +140,29 @@ namespace PF.Banking7.UI
             {
                 lblStatus.Text = ex.Message;
                 lblStatus.ForeColor = Color.Red;
+            }
+        }
+
+
+        private void dgvCustomers_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvCustomers.CurrentRow.Index > -1)
+            {
+                Customer customer = customers[dgvCustomers.CurrentRow.Index];                // Save today's date.
+                var today = DateTime.Today;
+                // Calculate the age.
+                var age = today.Year - customer.BirthDate.Year;
+                // Go back to the year the person was born in case of a leap year
+                if (customer.BirthDate.Date > today.AddYears(-age)) age--;
+
+                txtID.Text = customer.CustomerId.ToString();
+                txtFirstName.Text = customer.FirstName;
+                txtLastName.Text = customer.LastName;
+                txtSSN.Text = customer.SSN;
+                datetimeBirthday.Value = customer.BirthDate;
+                txtAge.Text = age.ToString();
+
+              
             }
         }
     }

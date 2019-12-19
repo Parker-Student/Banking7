@@ -23,7 +23,7 @@ namespace PF.Banking.BL
     {
         private int customerid;
 
-        public int CustomerID
+        public int CustomerId
         {
             get { return customerid; }
             set { customerid = value; }
@@ -40,7 +40,7 @@ namespace PF.Banking.BL
 
                 sqlCommand.CommandText = sql;
 
-                sqlCommand.Parameters.AddWithValue("@Id", this.CustomerID);
+                sqlCommand.Parameters.AddWithValue("@Id", this.CustomerId);
                 sqlCommand.Parameters.AddWithValue("@FirstName", this.FirstName);
                 sqlCommand.Parameters.AddWithValue("@LastName", this.LastName);
                 sqlCommand.Parameters.AddWithValue("@SSN", this.SSN);
@@ -72,7 +72,7 @@ namespace PF.Banking.BL
 
                 sqlCommand.CommandText = sql;
 
-                sqlCommand.Parameters.AddWithValue("@Id", this.CustomerID);
+                sqlCommand.Parameters.AddWithValue("@Id", this.CustomerId);
                 sqlCommand.Parameters.AddWithValue("@FirstName", this.FirstName);
                 sqlCommand.Parameters.AddWithValue("@LastName", this.LastName);
                 sqlCommand.Parameters.AddWithValue("@SSN", this.SSN);
@@ -99,10 +99,12 @@ namespace PF.Banking.BL
                 Database db = new Database();
                 SqlCommand sqlCommand = new SqlCommand();
                 string sql = "DELETE FROM tblCustomer WHERE Id = @Id";
+       
+
 
                 sqlCommand.CommandText = sql;
 
-                sqlCommand.Parameters.AddWithValue("@Id", this.CustomerID);
+                sqlCommand.Parameters.AddWithValue("@Id", this.CustomerId);
 
                 int result = db.Delete(sqlCommand);
                 db = null;
