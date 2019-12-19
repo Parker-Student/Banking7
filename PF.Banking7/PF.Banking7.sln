@@ -7,6 +7,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PF.Banking7.UI", "PF.Bankin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PF.Banking.BL", "PF.Banking.BL\PF.Banking.BL.csproj", "{F49E689A-E037-4BB3-B03A-B990FF128F4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PF.Banking.PL", "PF.Banking.PL\PF.Banking.PL.csproj", "{9166EFE0-30A8-4502-92A8-D701FB4CE1BD}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PF.Banking.DB", "PF.Banking.DB\PF.Banking.DB.sqlproj", "{CE560E57-2607-401F-8F6B-AC571CC97665}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{16B0F7B3-780C-4E60-8F85-78B21D2D049C}"
+	ProjectSection(SolutionItems) = preProject
+		D:\New folder (3)\Banking.sql = D:\New folder (3)\Banking.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +30,16 @@ Global
 		{F49E689A-E037-4BB3-B03A-B990FF128F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F49E689A-E037-4BB3-B03A-B990FF128F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F49E689A-E037-4BB3-B03A-B990FF128F4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9166EFE0-30A8-4502-92A8-D701FB4CE1BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9166EFE0-30A8-4502-92A8-D701FB4CE1BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9166EFE0-30A8-4502-92A8-D701FB4CE1BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9166EFE0-30A8-4502-92A8-D701FB4CE1BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE560E57-2607-401F-8F6B-AC571CC97665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE560E57-2607-401F-8F6B-AC571CC97665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE560E57-2607-401F-8F6B-AC571CC97665}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CE560E57-2607-401F-8F6B-AC571CC97665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE560E57-2607-401F-8F6B-AC571CC97665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE560E57-2607-401F-8F6B-AC571CC97665}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
